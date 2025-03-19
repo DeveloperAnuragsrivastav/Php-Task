@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+#div{
+    background-color: brown;
+    width: 100px;
+    height: 50px;
+    margin: 5px 0px;
+    position: fixed;
+   
+}
+</style>
+<body>
+    <button id="btn">Color Button</button>
+    
+
+    <div id="div"> hellow i am div</div>
+    <button id="divbtn">toggle div</button>
+
+
+    <script>
+
+
+        let btn=document.getElementById("btn")
+        let colors=["red","yellow","blue"]
+        let click=0;
+        btn.addEventListener("click",()=>{
+            btn.style.backgroundColor=colors[click]
+            click++
+        })
+
+
+
+let div=document.getElementById("div")
+let divbtn=document.getElementById("divbtn")
+divbtn.addEventListener("click",()=>{
+   if( div.style.display==="none" ||div.style.display===""){
+     div.style.display="block"
+   }
+  else{
+     div.style.display="none"
+  }
+})
+
+    </script>
+</body>
+</html>
